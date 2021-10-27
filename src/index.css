@@ -1,13 +1,85 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url(//db.onlinewebfonts.com/c/7c6e146fe91c1b2633316a6aee97a9af?family=Digital-7);
+@font-face {font-family: "Digital-7"; src: url("//db.onlinewebfonts.com/t/7c6e146fe91c1b2633316a6aee97a9af.eot"); src: url("//db.onlinewebfonts.com/t/7c6e146fe91c1b2633316a6aee97a9af.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/7c6e146fe91c1b2633316a6aee97a9af.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/7c6e146fe91c1b2633316a6aee97a9af.woff") format("woff"), url("//db.onlinewebfonts.com/t/7c6e146fe91c1b2633316a6aee97a9af.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/7c6e146fe91c1b2633316a6aee97a9af.svg#Digital-7") format("svg"); }
+html{
+  font-family:Arial, Helvetica, sans-serif;
+  background-color: rgb(194,194,194);
+}
+#calculator{
+  text-align:center;
+  width:450px;
+  height:600px;
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}
+h1{
+  font-size:20px;
+  text-align:center;
+  margin:10px;
+}
+#calculator-box{
+  background-color: black;
+  width:400px;
+  height:500px;
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  border:solid black 5px;
+}
+#display-formula{
+  font-family: Digital-7;
+  color:orange;
+  background-color:black;
+  font-size:25px;
+  line-height: 35px;
+  text-align:right;
+}
+#display-result{
+  font-family: Digital-7;
+  color:white;
+  font-size:35px;
+  background-color:black;
+  line-height:40px;
+  text-align:right;
+}
+#input-panel{
+  height:425px;
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 2px;
+}
+button{
+  color:white;
+  font-size:25px;
+  font-weight:bold;
+  border:none;
+}
+#clear{
+  background-color:rgb(176,51,42);
+}
+#equals{
+  background-color:rgb(42,94,146);
+}
+#one,#two,#three,#four,#five,#six,#seven,#eight,#nine,#zero,#decimal{
+  background-color:rgb(97,105,107);
+}
+#divide,#multiply,#add,#subtract{
+  background-color:rgb(164,165,167);
+}
+#input-panel > #clear{
+  grid-column: 1 / span 2;
+  grid-row:1;
+}
+#input-panel > #zero{
+  grid-column: 1 / span 2;
+}
+#input-panel > #equals{
+  grid-row: span 2;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+
+
+
